@@ -121,13 +121,16 @@ local function set_groups()
     DiagnosticUnderlineHint = { sp = colorscheme.diagnosticHint, underline = true },
     DiagnosticUnderlineOk = { sp = colorscheme.diagnosticOk, underline = true },
     -- LSP
-    LsspInlayHint = { fg = colorscheme.syntaxComment, italic = true },
+    LspInlayHint = { fg = colorscheme.syntaxComment, italic = true },
+    -- html tag
+    htmlTagName = { link = 'Tag' },
+    htmlTag = { link = 'Delimiter' },
   }
 
-  local filetypes = { 'html', 'javascript', 'typescript', 'tsx', 'jsp' }
+  local filetypes = { 'html', 'javascript', 'typescript', 'tsx' }
   for _, t in pairs(filetypes) do
-    groups['@tag.' .. t] = { fg = colorscheme.syntaxKeyword, bold = true, italic = true }
-    groups['@tag.delimiter.' .. t] = { fg = colorscheme.mainText, italic = true }
+    groups['@tag.' .. t] = { fg = colorscheme.syntaxKeyword, bold = true }
+    groups['@tag.delimiter.' .. t] = { fg = colorscheme.mainText }
     groups['@text.' .. t] = { fg = colorscheme.mainText }
     groups['@text.strong.' .. t] = { fg = colorscheme.mainText, bold = true }
     groups['@text.emphasis.' .. t] = { fg = colorscheme.mainText, italic = true }
@@ -137,7 +140,7 @@ local function set_groups()
     groups['@text.uri.' .. t] = { fg = colorscheme.syntaxSpecial, italic = true }
   end
   groups['@attribute.css'] = { fg = colorscheme.mainText }
-  groups['@punctuation.delimitor.css'] = { fg = colorscheme.mainText }
+  groups['@punctuation.delimiter.css'] = { fg = colorscheme.mainText }
   groups['@property.css'] = { fg = colorscheme.mainText, italic = true }
 
   for group, value in pairs(groups) do
