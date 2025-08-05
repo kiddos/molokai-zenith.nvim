@@ -3,7 +3,7 @@ local config = require('molokai-zenith.config')
 local colorscheme = {}
 
 colorscheme.mainText = '#E8E8E8'
-colorscheme.editorBackground = config.transparent and 'none' or '#242424'
+colorscheme.editorBackground = config.transparent and 'none' or '#272822'
 colorscheme.directoryText = '#AE85FC'
 -- message
 colorscheme.successText = '#22863a'
@@ -16,8 +16,8 @@ colorscheme.searchBackground = '#3A3A3A'
 -- matched bracket
 colorscheme.matchedBackground = colorscheme.searchBackground
 -- line number
-colorscheme.lineNumber = '#949494'
-colorscheme.lineNumberBackground = '#242424'
+colorscheme.lineNumber = '#80827C'
+colorscheme.lineNumberBackground = colorscheme.editorBackground
 colorscheme.cursorLineNumber = colorscheme.mainText
 colorscheme.cursorLineNumberBackground = '#3e3e3e'
 
@@ -31,20 +31,20 @@ colorscheme.selectionBackground = '#383A3E'
 -- tab
 colorscheme.tabBackground = '#171814'
 colorscheme.tabBackgroundFill = '#080808'
-colorscheme.tabBackgroundSelected = colorscheme.searchBackground
+colorscheme.tabBackgroundSelected = colorscheme.editorBackground
 
 -- syntax groups
 colorscheme.syntaxComment = '#808890'
 colorscheme.syntaxConstant = '#AE85FC'
-colorscheme.syntaxString = '#E6DA7B'
-colorscheme.syntaxFunction = '#82DD73'
-colorscheme.syntaxKeyword = '#FF3566'
-colorscheme.syntaxPreprocessor = '#FF3566'
-colorscheme.syntaxMacro = '#82DD73'
-colorscheme.syntaxType = '#6BD9ED'
-colorscheme.syntaxSpecial = '#6BD9ED'
+colorscheme.syntaxString = '#E6DB74'
+colorscheme.syntaxFunction = '#A6E22D'
+colorscheme.syntaxKeyword = '#F92672'
+colorscheme.syntaxPreprocessor = '#F92672'
+colorscheme.syntaxMacro = '#A6E22D'
+colorscheme.syntaxType = '#64D8ED'
+colorscheme.syntaxSpecial = '#64D8ED'
 colorscheme.syntaxSpecialComment = '#FB9633'
-colorscheme.syntaxDebug = '#6BD9ED'
+colorscheme.syntaxDebug = '#64D8ED'
 colorscheme.syntaxUnderline = '#FB9633'
 colorscheme.syntaxIgnore = '#808890'
 colorscheme.syntaxError = colorscheme.errorText
