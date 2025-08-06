@@ -3,7 +3,7 @@ local config = require('molokai-zenith.config')
 local colorscheme = {}
 
 colorscheme.mainText = '#E8E8E8'
-colorscheme.editorBackground = config.transparent and 'none' or '#272822'
+colorscheme.editorBackground = config.transparent and 'none' or '#272727'
 colorscheme.directoryText = '#AE85FC'
 -- message
 colorscheme.successText = '#22863a'
