@@ -17,16 +17,17 @@ local function set_groups()
     Normal = { fg = colorscheme.mainText, bg = bg },
     -- floating window
     NormalFloat = { fg = colorscheme.mainText, bg = bg },
+    FloatBorder = { fg = colorscheme.syntaxComment, bg = bg },
     -- cursor
     Cursor = { reverse = true },
     CursorIM = { reverse = true },
-    CurSearch = { bg = colorscheme.searchBackground, italic = true },
+    CurSearch = { fg = colorscheme.editorBackground, bg = colorscheme.warningEmphasis, bold = true },
     CursorColumn = { link = 'CursorLine' },
-    CursorLine = { bg = bg },
+    CursorLine = { bg = colorscheme.cursorLine },
     -- Directory
     Directory = { fg = colorscheme.directoryText },
     -- diff
-    DiffAdd = { fg = colorscheme.sucessText, bg = bg },
+    DiffAdd = { fg = colorscheme.successText, bg = bg },
     DiffChange = { fg = colorscheme.warningText, bg = bg },
     DiffDelete = { fg = colorscheme.errorText, bg = bg },
     DiffText = { fg = colorscheme.warningEmphasis, bg = bg },
@@ -34,10 +35,10 @@ local function set_groups()
     Folded = { fg = colorscheme.folded, bg = bg, italic = true },
     FoldedColumn = { fg = colorscheme.folded, bg = bg, italic = true },
     -- matched bracket
-    MatchParent = { bg = colorscheme.matchedBackground, bold = true },
+    MatchParent = { fg = colorscheme.warningText, bg = colorscheme.matchedBackground, bold = true },
     -- search
-    Search = { bg = colorscheme.searchBackground, italic = true },
-    IncSearch = { bg = colorscheme.searchBackground, italic = true },
+    Search = { bg = colorscheme.searchBackground, bold = true },
+    IncSearch = { fg = colorscheme.editorBackground, bg = colorscheme.warningEmphasis, bold = true },
     -- line number
     LineNr = { fg = colorscheme.lineNumber, bg = colorscheme.lineNumberBackground },
     CursorLineNr = { fg = colorscheme.cursorLineNumber, bg = colorscheme.cursorLineNumberBackground, bold = true },
@@ -115,11 +116,11 @@ local function set_groups()
     DiagnosticInfo = { fg = colorscheme.diagnosticInfo, italic = true },
     DiagnosticHint = { fg = colorscheme.diagnosticHint, italic = true },
     DiagnosticOk = { fg = colorscheme.diagnosticOk, italic = true },
-    DiagnosticUnderlineError = { sp = colorscheme.diagnosticError, italic = true, underline = false, strikethrough = true },
-    DiagnosticUnderlineWarn = { sp = colorscheme.diagnosticWarn, italic = true, underline = true },
-    DiagnosticUnderlineInfo = { sp = colorscheme.diagnosticInfo, italic = true, underline = true },
-    DiagnosticUnderlineHint = { sp = colorscheme.diagnosticHint, underline = true },
-    DiagnosticUnderlineOk = { sp = colorscheme.diagnosticOk, underline = true },
+    DiagnosticUnderlineError = { sp = colorscheme.diagnosticError, undercurl = true },
+    DiagnosticUnderlineWarn = { sp = colorscheme.diagnosticWarn, undercurl = true },
+    DiagnosticUnderlineInfo = { sp = colorscheme.diagnosticInfo, undercurl = true },
+    DiagnosticUnderlineHint = { sp = colorscheme.diagnosticHint, undercurl = true },
+    DiagnosticUnderlineOk = { sp = colorscheme.diagnosticOk, undercurl = true },
     -- LSP
     LspInlayHint = { fg = colorscheme.syntaxComment, italic = true },
     -- html tag

@@ -2,60 +2,66 @@ local config = require('molokai-zenith.config')
 
 local colorscheme = {}
 
-colorscheme.mainText = '#E8E8E8'
-colorscheme.editorBackground = config.transparent and 'none' or '#272727'
-colorscheme.directoryText = '#AE85FC'
--- message
-colorscheme.successText = '#22863a'
-colorscheme.warningText = '#ff9800'
-colorscheme.errorText = '#cd3131'
-colorscheme.warningEmphasis = '#cd9731'
--- fold
-colorscheme.folded = '#BCBCBC'
-colorscheme.searchBackground = '#3A3A3A'
--- matched bracket
-colorscheme.matchedBackground = colorscheme.searchBackground
--- line number
-colorscheme.lineNumber = '#80827C'
-colorscheme.lineNumberBackground = colorscheme.editorBackground
-colorscheme.cursorLineNumber = colorscheme.mainText
-colorscheme.cursorLineNumberBackground = '#3e3e3e'
+-- Base & Editor
+colorscheme.mainText = '#F8F8F2'
+colorscheme.editorBackground = config.transparent and 'none' or '#222326'
+colorscheme.cursorLine = config.transparent and 'none' or '#292A2E'
+colorscheme.directoryText = '#66D9EF'
 
--- popup menu
-colorscheme.menuBackground = '#303030'
-colorscheme.menuSelection = '#3F3F3F'
-colorscheme.menuThumb = '#6C6C6C'
-colorscheme.menuThumbBackground = '#262626'
--- selection
-colorscheme.selectionBackground = '#383A3E'
--- tab
-colorscheme.tabBackground = '#171814'
-colorscheme.tabBackgroundFill = '#080808'
+-- Messages & Diff
+colorscheme.successText = '#A6E22D'
+colorscheme.warningText = '#FD971F'
+colorscheme.errorText = '#F92672'
+colorscheme.warningEmphasis = '#E6DB74'
+
+-- Fold, Search & Selection
+colorscheme.folded = '#757B87'
+colorscheme.searchBackground = '#4A4735'
+colorscheme.matchedBackground = '#3E4452'
+colorscheme.selectionBackground = '#3E4453'
+
+-- Line numbers
+colorscheme.lineNumber = '#5C6068'
+colorscheme.lineNumberBackground = colorscheme.editorBackground
+colorscheme.cursorLineNumber = '#FD971F'
+colorscheme.cursorLineNumberBackground = colorscheme.editorBackground
+
+-- Popup menu
+colorscheme.menuBackground = '#28292D'
+colorscheme.menuSelection = '#3D424F'
+colorscheme.menuThumb = '#5A5F6B'
+colorscheme.menuThumbBackground = '#202124'
+
+-- Tabline
+colorscheme.tabBackground = '#1C1D20'
+colorscheme.tabBackgroundFill = '#161719'
 colorscheme.tabBackgroundSelected = colorscheme.editorBackground
 
--- syntax groups
-colorscheme.syntaxComment = '#808890'
-colorscheme.syntaxConstant = '#AE85FC'
+-- Syntax groups
+colorscheme.syntaxComment = '#7C838F'
+colorscheme.syntaxConstant = '#AE81FF'
 colorscheme.syntaxString = '#E6DB74'
 colorscheme.syntaxFunction = '#A6E22D'
 colorscheme.syntaxKeyword = '#F92672'
 colorscheme.syntaxPreprocessor = '#F92672'
 colorscheme.syntaxMacro = '#A6E22D'
-colorscheme.syntaxType = '#64D8ED'
-colorscheme.syntaxSpecial = '#64D8ED'
-colorscheme.syntaxSpecialComment = '#FB9633'
-colorscheme.syntaxDebug = '#64D8ED'
-colorscheme.syntaxUnderline = '#FB9633'
-colorscheme.syntaxIgnore = '#808890'
+colorscheme.syntaxType = '#66D9EF'
+colorscheme.syntaxSpecial = '#66D9EF'
+colorscheme.syntaxSpecialComment = '#FD971F'
+colorscheme.syntaxDebug = '#66D9EF'
+colorscheme.syntaxUnderline = '#FD971F'
+colorscheme.syntaxIgnore = '#7C838F'
 colorscheme.syntaxError = colorscheme.errorText
-colorscheme.syntaxTodo = '#FB9633'
-colorscheme.syntaxAdded = '#8AC374'
-colorscheme.syntaxChanged = '#DAC75E'
-colorscheme.syntaxRemoved = '#DA5E5E'
+colorscheme.syntaxTodo = '#FD971F'
+colorscheme.syntaxAdded = '#85D968'
+colorscheme.syntaxChanged = '#E6DB74'
+colorscheme.syntaxRemoved = '#F92672'
 
-colorscheme.diagnosticError = '#F13B3B'
-colorscheme.diagnosticWarn = '#F1AC3B'
-colorscheme.diagnosticInfo = '#717171'
-colorscheme.diagnosticOk = '#69DD3A'
+-- Diagnostics
+colorscheme.diagnosticError = '#F92672'
+colorscheme.diagnosticWarn = '#FD971F'
+colorscheme.diagnosticInfo = '#66D9EF'
+colorscheme.diagnosticHint = '#64D8B8'
+colorscheme.diagnosticOk = '#A6E22D'
 
 return colorscheme
